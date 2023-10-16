@@ -1,0 +1,149 @@
+[
+    {
+        "id" : 1,
+        "product_name" : "Onion Uttapam",
+        "description" : "A South Indian dish made with fermented batter of rice and lentils, cooked on a griddle with onion.",
+        "price" : 78,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/84e/c37a26c8badfd5754cfe69976f66484e.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 2,
+        "product_name" : "Veg Fried Rice",
+        "description" : "A spicy Indo Chinese dish made with basmati rice, vegetables and secret sauces.",
+        "price" : 110,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/2f1/dd983ecad0a726bbbaac0020922f02f1.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 3,
+        "product_name" : "Paneer Masala",
+        "description" : "A creamy indulgence of soft paneer cubes cooked with undertones of whole spices in a tomato and onion based gravy.",
+        "price" : 200,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/ece/429ec6ddd1350367aae4aea48a031ece.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 4,
+        "product_name" : "Paneer Kadai",
+        "description" : "A rich spicy dish with paneer cooked in a spicy onion-tomato based gravy.",
+        "price" : "210",
+        "image" : "https://b.zmtcdn.com/data/dish_photos/c26/d47f1df53e19f023ca8bb6b36bb02c26.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 5,
+        "product_name" : "Butter Chicken Gravy",
+        "description" : "A decadently creamy dish prepared with chicken chunks dunked in a hearty masala of tomatoes, onions and mild Indian spices.",
+        "price" : 280,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/861/2adebe8a8a8445ab7190b61aec83b861.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 6,
+        "product_name" : "Boneless Kadai Chicken",
+        "description" : "Spicy, hot and tangy, chicken pieces coked with whole spices simmered in flavoursome onion-tomato masala.",
+        "price" : 265,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/0cd/67f8eff8fa93cea91a1a307752d850cd.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 7,
+        "product_name" : "Mutton Chetti Nadu Gravy",
+        "description" : "Cooked with fragrant spices, this semi-dry chicken preparation perfectly combines juicy chicken morsels with the aroma of whole spices for an amazing mouthfeel.",
+        "price" : 385,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/95b/a2ff1fe1a38d7d8a5d0055d1d579595b.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 8,
+        "product_name" : "Plain Biryani",
+        "description" : "Mildly flavoured aromatic rice that can be accompanied with various onion- tomato based gravies.",
+        "price" : 165,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/ac7/1a6252294d2a1dad9b1484add5036ac7.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 9,
+        "product_name" : "Egg Biryani",
+        "description" : "Boiled egg covered in flavour-packed, aromatic rice cooked in a perfect blend of spices.",
+        "price" : "230",
+        "image" : "https://b.zmtcdn.com/data/dish_photos/3c3/7a8800c678bbe978f648a1fe1eb123c3.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 10,
+        "product_name" : "Veg Kothu",
+        "description" : "Scramble of paratha shredded into bite-sized pieces and stir-fried along with grated veggies sprinkled with spices.",
+        "price" : 125,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/efc/f0624ea83de93ef79b4e89b8708d2efc.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 11,
+        "product_name" : "Veg Fried Rice",
+        "description" : "Cooked finest basmati rice stir fried in a wok, mixed with fresh seasonal farm fresh vegetables and stirred.",
+        "price" : 190,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/913/bc5ef7b8dd9fdd5c468f2ef18e8b6913.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 12,
+        "product_name" : "Paneer Fried Rice",
+        "description" : "Cooked finest basmati rice stir fried in a wok, mixed with fresh paneer pieces, fresh vegetables and stirred.",
+        "price" : 200,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/050/60d1ae9766c7ac4644bdf6de3bfe2050.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 13,
+        "product_name" : "Egg Poriyal",
+        "description" : "Scrambled eggs with a light spice shower topped with onions.",
+        "price" : 50,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/cf2/3905cf6d658edf3599f3682f41021cf2.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 14,
+        "product_name" : "Vaazhai Elai cooked Parotta with Chicken Gravy",
+        "description" : "Tender chicken marinated in authentic kerala spices, cooked along with curry and wrapped in banana leaf and steamed.",
+        "price" : 230,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/d4d/0e2ec1bca85fc44092c4273713058d4d.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 15,
+        "product_name" : "Crab Pepper Fry",
+        "description" : "Fresh catch crab pieces marinated with our spicy masala with pepper and slow cooked and pan fried in coconut oil with the thick spicy, onion, ginger, garlic masala.",
+        "price" : 330,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/60c/8be43a2f1b838f899b0ca04f64d1060c.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 16,
+        "product_name" : "Mushroom Manchurian",
+        "description" : "Stir-fried mushrooms coated with seasoned corn flour batter tossed in zesty Manchurian sauce.",
+        "price" : 200,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/aa8/74575c46973403bc91155ea24369aaa8.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 17,
+        "product_name" : "Chilli Baby Corn Dry",
+        "description" : "A popular Indo Chinese dish made with baby corn coated in a spicy batter and deep fried until crispy, then stir fried with onion, peppers and a variety of sauces.",
+        "price" : 75,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/c52/67ea5883dfd8f04ed43f6276f5d91c52.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 18,
+        "product_name" : "Paneer Butter Masala",
+        "description" : "A North Indian dish made with soft cottage cheese [paneer] cooked in a spicy gravy made with onions, tomatoes and a variety of spices.",
+        "price" : 135,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/d9f/b6f5e4cde6da39fcc16f2c76a3483d9f.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 19,
+        "product_name" : "Gobi Manchurian",
+        "description" : "Gobi manchurian is a spicy, sweet and sour gravy that tastes great with veg fried rice or veg noodles or hakka noodles.",
+        "price" : 100,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/715/340f2fc89ff4450773ffacdcc1c42715.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 20,
+        "product_name" : "Chapathi 1 PC",
+        "description" : "A North Indian flatbread made with wheat flour.",
+        "price" : 25,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/099/1fd08c67c54068a7bb75461fbf6e9099.jpg?fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+        "id" : 21,
+        "product_name" : "Veg Kothu Parotta",
+        "description" : "Kothu parotta is a popular Tamil Nadu street food where flaky shredded flatbreads are cooked in a spicy curry masala.",
+        "price" : 72,
+        "image" : "https://b.zmtcdn.com/data/dish_photos/ee1/8708ba9a95e0cc7ad7e398a86bac4ee1.jpg?fit=around|130:130&crop=130:130;*,*"
+    }
+]
