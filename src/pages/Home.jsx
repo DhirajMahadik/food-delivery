@@ -7,6 +7,9 @@ import { addToCart } from '../redux/slices/cart-slice'
 import { useDispatch, useSelector } from 'react-redux'
 import Footer from '../footer/Footer'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const Home = () => {
 
@@ -33,6 +36,11 @@ const Home = () => {
         state.setViewProductModal(true)
     }
 
+    const addToCartHandler = (product)=>{
+        dispatch(addToCart(product))
+        toast.success('Product added to cart',{autoClose:1000,theme:'light'})
+    }
+
     const searchHandler = (e) => {
         let value = e.target.value;
         if (value === '') {
@@ -46,7 +54,8 @@ const Home = () => {
     }
 
     return (
-        <>
+        <>  
+            {/* <ToastContainer position='top-left' autoClose={1000} theme='light'/> */}
             <div className='d-flex' style={bannerStyle}>
                 <div className='m-auto'>
                     <div className='p-4 rounded' style={{ backgroundColor: '#00000060' }}>
@@ -71,9 +80,9 @@ const Home = () => {
                 </div>
                 <hr className='p-0 m-0' />
                 <div className="container  py-4">
-                    <div className='row'>
+                    <div className='row pb-4'>
                         {
-                            data.slice(0, 9).map((product, index) => {
+                           data.length >= 1 ? data.slice(0, 9).map((product, index) => {
                                 return <div key={index} className="col-md-6 col-lg-4 col-6 mb-3" >
                                     <div className="card mb-3 " >
                                         <div className="row g-0">
@@ -85,13 +94,19 @@ const Home = () => {
                                                     <h6 className="card-title" role='button' onClick={() => viewProductHandler(product)}>{product.product_name.slice(0, 26)}...</h6>
                                                     <p className="card-text" style={{ fontSize: '13px', margin: "2px 0" }}>{product.description.slice(0, 50)}...</p>
                                                     <p> Price : {product.price}/-</p>
-                                                    <button className="btn btn-sm btn-danger" onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+                                                    <button className="btn btn-sm btn-danger" onClick={()=>addToCartHandler(product)}>Add to Cart</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            })
+                            }): (
+                                <div className='d-flex' style={{height:'50vh'}}>
+                                        <div className="m-auto">
+                                            <h2 className='text-center text-secondary'>Not Found</h2>
+                                        </div>
+                                </div>
+                            )
                         }
                     </div>
                 </div>

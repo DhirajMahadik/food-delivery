@@ -4,11 +4,17 @@ import { useContext } from "react"
 import Context from "../context/Context"
 import { useDispatch } from "react-redux"
 import { addToCart } from "../redux/slices/cart-slice"
+import { toast } from 'react-toastify'
 
 const ViewProduct = ({ product }) => {
 
     const state = useContext(Context)
     const dispatch = useDispatch()
+
+    const addToCartHandler = (product)=>{
+        dispatch(addToCart(product))
+        toast.success('Product added to cart',{autoClose:1000,theme:'light'})
+    }
 
     return (
         <ViewProductStyled className='d-flex position-fixed  z-1 w-100 '>
@@ -27,7 +33,7 @@ const ViewProduct = ({ product }) => {
                             <h5 className="card-text">{product.description}</h5>
                             <h6 className="card-text">Price : {product.price} /-</h6>
                             <div className="d-flex">
-                                <button className="btn btn-danger m-auto" onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+                                <button className="btn btn-danger m-auto" onClick={() => addToCartHandler(product)}>Add to Cart</button>
                             </div>
 
 
