@@ -26,19 +26,6 @@ const ViewProduct = styled.div`
         }
     }
 
-    /* .row{
-        height: 50vh;
-        width: 50vw;
-        div{
-            img{
-                height: 250px;
-                width: 250px;
-            }
-        }
-    } */
-
-    
-
 `;
 
 export default ViewProduct;

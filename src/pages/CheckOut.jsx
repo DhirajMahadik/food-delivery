@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { removeFromCart } from "../redux/slices/cart-slice"
 import { BiRupee } from 'react-icons/bi'
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useContext } from "react"
 import axios from "axios"
 import Context from "../context/Context"
 import {toast, ToastContainer} from 'react-toastify'
@@ -18,9 +18,9 @@ const CheckOut = () => {
 
   const makePayment = async () => {
 
-    let getKey = await axios({ url: 'http://localhost:5500/api/get-key' })
+    let getKey = await axios({ url: `${process.env.REACT_APP_URL}/api/get-key` })
 
-    axios({ url: 'http://localhost:5500/api/make-payment', method: 'POST', data: { cost } })
+    axios({ url: `${process.env.REACT_APP_URL}/api/make-payment`, method: 'POST', data: { cost } })
       .then((response) => {
         const order = response
         const options = {
@@ -31,7 +31,7 @@ const CheckOut = () => {
           description: "Test Transaction",
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFipiuZpzX5NWOG3qo68DOyK6UbxZk9TDoVg&usqp=CAU",
           order_id: order.data.id,
-          callback_url: "http://localhost:5500/api/verify-payment",
+          callback_url: `${process.env.REACT_APP_URL}/api/verify-payment/${user.id}`,
           prefill: {
             name: user.name,
             email: user.email,
@@ -49,16 +49,19 @@ const CheckOut = () => {
         payment.open();
 
       }).catch((error) => {
-
+          toast.error(error.message)
       })
 
   }
 
-  console.log(cost)
+  const removeItems  =(id) => {
+    dispatch(removeFromCart(id))
+  }
 
   useEffect(() => {
     getTotalCost()
-  }, [])
+    // eslint-disable-next-line
+  }, [removeItems])
 
   return (
     <>
@@ -69,24 +72,24 @@ const CheckOut = () => {
           <h2 className="my-4 py-2 fw-bolder  text-center">Selected items</h2>
         </div>
         <hr />
-        <div className="row" style={{ height: '-webkit-fill-availabal', overflow: 'auto' }}>
+        <div className="row pb-5" style={{ height: '-webkit-fill-availabal', overflow: 'auto' }}>
           {
             cart_products.length >= 1 ? cart_products.map((product, index) => {
               return <div key={index} className="col-md-6 col-12">
-                <div class="card mb-3 ">
-                  <div class="row g-0">
-                    <div class="col-md-3 p-2 d-flex">
-                      <img src={product.image} class="img-fluid rounded m-auto" alt="..." />
+                <div className="card mb-3 ">
+                  <div className="row g-0">
+                    <div className="col-md-3 p-2 d-flex">
+                      <img src={product.image} className="img-fluid rounded m-auto" alt="..." />
                     </div>
-                    <div class="col-md-9">
-                      <div class="card-body">
-                        <span class="card-title fw-bold">{product.product_name}</span>
+                    <div className="col-md-9">
+                      <div className="card-body">
+                        <span className="card-title fw-bold">{product.product_name}</span>
                         <br />
-                        <span class="card-text">{product.description.slice(0.50)}</span>
+                        <span className="card-text" style={{fontSize:'12px'}}>{product.description.slice(0.50)}</span>
                         <br />
-                        <span class="card-text fw-600 ">Rs. {product.price} /-</span>
+                        <span className="card-text fw-600 ">Rs. {product.price} /-</span>
                         <br />
-                        <span class="card-text"><small role="button" class="text-danger" onClick={() => dispatch(removeFromCart(product.id))}>remove</small></span>
+                        <span className="card-text"><small role="button" className="text-danger" onClick={()=>removeItems(product.id)}>remove</small></span>
                       </div>
                     </div>
                   </div>
@@ -98,7 +101,7 @@ const CheckOut = () => {
         </div>
         <div className="container d-flex flex-column fixed-bottom my-4 bottom-5" >
           <div className="d-flex bg-light justify-content-end align-items-center px-2 py-2"><span className="align-items-center">Total:<BiRupee size={18} />{cost} </span></div>
-          <div className={`btn btn-success w-100 ${isLogin ? cart_products.length < 1 && "disabled" : "disabled"}`} onClick={makePayment}>Proceede To Pay</div>
+          <div className={`btn btn-success w-100 ${isLogin ? cart_products.length < 1 && "disabled" : "disabled"}`} onClick={makePayment}>{!isLogin && "Login to"} Proceede To Pay</div>
         </div>
       </div>
 

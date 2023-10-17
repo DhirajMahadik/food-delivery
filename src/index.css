@@ -23,3 +23,10 @@ input::placeholder{
   outline: none !important;
   box-shadow: none !important;
 }
+
+
+@media (min-width:990px) {
+  .cart{
+    display: none !important;
+  }
+}

@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import Context from './context/Context';
 import ViewProduct from './components/ViewProduct';
 import Login from './components/Login';
+import PaymentConfirmation from './pages/PaymentConfirmation';
 
 function App() {
 
@@ -15,12 +16,13 @@ function App() {
 
   return (
     <BrowserRouter>
-    {state.viewProductModal && <ViewProduct product={state.viewProduct} />}
-    {state.loginModal && <Login/>}
+      {state.viewProductModal && <ViewProduct product={state.viewProduct} />}
+      {state.loginModal && <Login />}
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/check-out' element={<CheckOut />} />
+        <Route path='/payment-confirmation/:status/:reference' element={<PaymentConfirmation />} />
       </Routes>
     </BrowserRouter>
 
