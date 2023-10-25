@@ -16,7 +16,7 @@ const Login = () => {
 
     const SignInHandler = (e) => {
         e.preventDefault();
-        axios.post('http://127.0.0.1:5500/api/auth/login', data)
+        axios.post(`${process.env.REACT_APP_URL}/api/auth/login`, data)
             .then((response) => {
                 localStorage.setItem('auth_token', JSON.stringify(response.data.token))
                 state.setIsLogin(true)
@@ -31,7 +31,7 @@ const Login = () => {
     const SignUpHandler = (e) => {
         e.preventDefault();
         if (signUpdata.password === signUpdata.confirmP) {
-            axios.post('http://127.0.0.1:5500/api/auth/register', signUpdata)
+            axios.post(`${process.env.REACT_APP_URL}/api/auth/register`, signUpdata)
                 .then((response) => {
                     setSignUpdata({ name: '', phone: '', email: '', password: '', confirmP: '' })
                     setType('login')
@@ -63,7 +63,7 @@ const Login = () => {
     return (
         <>
             <ToastContainer position='top-center' theme='light' autoClose={3000} />
-            {type === 'login' ? <div className='container-fluid position-absolute d-flex z-1 ' style={{ height: '100vh', backgroundColor: '#00000099' }}>
+            {type === 'login' ? <div className='container-fluid position-absolute d-flex z-2 ' style={{ height: '100vh', backgroundColor: '#00000099' }}>
                 <div className="d-flex p-3 flex-column bg-light m-auto position-sticky bg-secondary" style={{ height: '350px', width: '400px', borderRadius: '10px' }}>
                     <div className='d-flex justify-content-end'><CiCircleRemove role='button' onClick={() => state.setLoginModal(false)} size={25} /></div>
                     <form className='m-auto w-75' onSubmit={SignInHandler}>
