@@ -69,8 +69,8 @@ const Home = () => {
                 </div>
             </div>
             <div className='d-flex flex-column bg-dark text-light h-100'>
-                <div className='mx-auto d-flex align-items-center my-2'>
-                    <h2 className='text-center'>Food Items</h2>
+                <div className='d-flex align-items-center justify-content-between my-2'>
+                    <h2 className='text-center mx-2'>Food Items</h2>
                     <div onClick={() => navigate('/check-out')} className="cart position-relative mx-4" style={{ width: 'fit-content' }}>
                         <div><BsCartFill role='button' color='#fff' size={20} /></div>
                         {cart_products.length >= 1 && <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
