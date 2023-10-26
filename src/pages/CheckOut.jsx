@@ -103,7 +103,7 @@ const CheckOut = () => {
                 <h5 className="text-center text-secondary">Your cart is empty</h5>
               </div>}
           </div>
-          <div className="container d-flex flex-column fixed-bottom my-4 bottom-5" >
+          <div className="container d-flex flex-column fixed-bottom my-4 bottom-5 " style={{zIndex:'auto'}} >
             <div className="d-flex bg-light justify-content-end align-items-center px-2 py-2"><span className="align-items-center">Total:<BiRupee size={18} />{cost} </span></div>
             <div className={`btn btn-success w-100 ${isLogin ? cart_products.length < 1 && "disabled" : "disabled"}`} onClick={makePayment}>{!isLogin && "Login to"} Proceede To Pay</div>
           </div>
