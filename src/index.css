@@ -30,3 +30,8 @@ input::placeholder{
     display: none !important;
   }
 }
+@media (min-width:990px) {
+  .food-items-heading{
+    width: 100% !important;
+  }
+}
