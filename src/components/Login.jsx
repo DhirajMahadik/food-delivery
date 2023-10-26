@@ -41,7 +41,11 @@ const Login = () => {
                     setType('login')
 
                 }).catch((error) => {
-                    toast.error(error.message)
+                    if(error.response){
+                        toast.error(error.response.data.error)
+                    }else{
+                        toast.error(error.message)
+                    }
                 })
         } else {
             toast.error('password not matched')
