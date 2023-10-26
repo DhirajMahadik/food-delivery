@@ -24,7 +24,11 @@ const Login = () => {
                 state.getUserDetails(response.data.token)
                 state.setLoginModal(false)
             }).catch((error) => {
-                toast.error(error.message)
+                if(error.response){
+                    toast.error(error.response.data.error)
+                }else{
+                    toast.error(error.message)
+                }
             })
     }
 
